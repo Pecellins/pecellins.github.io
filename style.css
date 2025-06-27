@@ -164,14 +164,21 @@ h2 {
 
 .icon-list li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
 .icon-list i {
-    width: 20px;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 10px;
     color: var(--primary-color);
+    font-size: 1.2em;
+    line-height: 1;
 }
 
 .btn {

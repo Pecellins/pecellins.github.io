@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Portfolio de Jesús García Pecellin</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="smartphone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
+
+    <!-- Botón hamburguesa para móvil -->
+    <button class="menu-toggle" aria-label="Abrir menú" style="display:none;">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <!-- Fondo oscuro -->
+    <div class="mobile-nav-backdrop"></div>
+    <!-- Menú móvil -->
+    <nav class="mobile-nav">
+        <a href="index.html#bio">Sobre Mí</a>
+        <a href="index.html#experiencia">Experiencia</a>
+        <a href="index.html#formacion">Formación</a>
+        <a href="index.html#habilidades">Habilidades</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
 
     <header>
         <div class="container">
@@ -48,6 +66,42 @@
             <p>&copy; 2025 Jesús García Pecellin. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+    // Mostrar botón hamburguesa solo en móvil
+    function checkMenuButton() {
+        const btn = document.querySelector('.menu-toggle');
+        if(window.innerWidth <= 600) {
+            btn.style.display = 'flex';
+        } else {
+            btn.style.display = 'none';
+            document.querySelector('.mobile-nav').classList.remove('open');
+            document.querySelector('.mobile-nav-backdrop').classList.remove('open');
+        }
+    }
+    window.addEventListener('resize', checkMenuButton);
+    window.addEventListener('DOMContentLoaded', checkMenuButton);
+
+    // Lógica menú móvil
+    const menuBtn = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const backdrop = document.querySelector('.mobile-nav-backdrop');
+    menuBtn.addEventListener('click', function() {
+        mobileNav.classList.toggle('open');
+        backdrop.classList.toggle('open');
+    });
+    backdrop.addEventListener('click', function() {
+        mobileNav.classList.remove('open');
+        backdrop.classList.remove('open');
+    });
+    // Cerrar menú al hacer click en un enlace
+    document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            mobileNav.classList.remove('open');
+            backdrop.classList.remove('open');
+        });
+    });
+    </script>
 
 </body>
 </html>

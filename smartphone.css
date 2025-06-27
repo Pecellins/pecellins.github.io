@@ -98,23 +98,6 @@
         gap: 1.1rem;
     }
     .mobile-nav button {
-        width: 100%;
-        background: var(--primary-color, #007BFF);
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 0.9rem 0;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s, transform 0.2s;
-        box-shadow: 0 1px 6px rgba(0,0,0,0.07);
-    }
-    .mobile-nav button:hover {
-        background: #0056b3;
-        transform: scale(1.04);
-    }
-    .mobile-nav a {
         display: none;
     }
     /* Fondo oscuro al abrir menú */
@@ -185,4 +168,27 @@
         font-size: 1.2rem;
         margin: 0 0.3rem;
     }
+}
+
+@media (max-width: 768px) {
+    /* ...existing code... */
+    .mobile-nav button {
+        display: block;
+        width: 100%;
+        background: var(--primary-color, #007BFF);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.9rem 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    }
+    .mobile-nav button:hover {
+        background: #0056b3;
+        transform: scale(1.04);
+    }
+    /* ...existing code... */
 }

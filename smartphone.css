@@ -1,6 +1,6 @@
 /* Estilos específicos para smartphones */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         font-size: 15px;
         padding: 0;

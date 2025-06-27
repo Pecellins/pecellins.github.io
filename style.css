@@ -104,7 +104,7 @@ h2 {
 }
 
 .aboutme-title {
-    text-align: center;
+    text-align: middle;
     font-size: 2rem;
     margin-top: 3rem;
     margin-bottom: 0.5rem;
@@ -118,10 +118,10 @@ h2 {
     margin-bottom: 2rem;
 }
 
-/* Bio Section */
+
 #bio .bio-content {
     display: flex;
-    align-items: center; /* Cambia flex-start por center para alinear horizontalmente */
+    align-items: center; 
     gap: 2rem;
 }
 
@@ -131,10 +131,10 @@ h2 {
     border-radius: 50%;
     object-fit: cover;
     padding-top: 16px;
-    margin-right: 24px; /* Añade separación hacia la izquierda (empuja la imagen a la izquierda) */
+    margin-right: 24px; 
 }
 
-/* Grid & Cards */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -177,7 +177,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -189,6 +188,8 @@ h2 {
     transition: background-color 0.2s ease-in-out;
     border: none;
     cursor: pointer;
+    margin-bottom: 2rem;
+
 }
 
 .btn:hover {
@@ -216,6 +217,14 @@ form textarea {
 
 form button {
     align-self: flex-start;
+}
+
+.bio-text-content .btn {
+    margin-top: 1rem;
+}
+
+.button-container {
+    text-align: center;
 }
 
 /* Footer */

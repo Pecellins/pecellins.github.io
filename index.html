@@ -132,7 +132,6 @@
     </footer>
 
     <script>
-    // Mostrar botón hamburguesa solo en móvil
     function checkMenuButton() {
         const btn = document.querySelector('.menu-toggle');
         if(window.innerWidth <= 768) {
@@ -145,22 +144,19 @@
     }
     window.addEventListener('resize', checkMenuButton);
     window.addEventListener('DOMContentLoaded', checkMenuButton);
-
-    // Lógica menú móvil
     const menuBtn = document.querySelector('.menu-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
     const backdrop = document.querySelector('.mobile-nav-backdrop');
     menuBtn.addEventListener('click', function() {
         mobileNav.classList.toggle('open');
         backdrop.classList.toggle('open');
-        menuBtn.classList.toggle('active'); // animación
+        menuBtn.classList.toggle('active');
     });
     backdrop.addEventListener('click', function() {
         mobileNav.classList.remove('open');
         backdrop.classList.remove('open');
         menuBtn.classList.remove('active');
     });
-    // Cerrar menú al hacer click en un enlace
     document.querySelectorAll('.mobile-nav a').forEach(function(link) {
         link.addEventListener('click', function() {
             mobileNav.classList.remove('open');
@@ -168,7 +164,6 @@
             menuBtn.classList.remove('active');
         });
     });
-    // Cerrar menú al hacer click en un botón
     document.querySelectorAll('.mobile-nav button').forEach(function(btn) {
         btn.addEventListener('click', function() {
             mobileNav.classList.remove('open');
@@ -177,6 +172,5 @@
         });
     });
     </script>
-
 </body>
 </html>
